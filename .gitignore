@@ -1,0 +1,4 @@
+# Editor and cache files
+.DS_Store
+.idea
+__pycache__

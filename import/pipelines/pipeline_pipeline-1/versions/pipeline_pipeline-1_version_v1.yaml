@@ -1,0 +1,31 @@
+version_name: "v1"
+version_description: ""
+version_labels: {}
+request_retention_mode: "full"
+request_retention_time: 604800
+objects: 
+  - name: "deployment-1"
+    reference_name: "deployment-1"
+    reference_version: ""
+  - name: "deployment-2-v1"
+    reference_name: "deployment-2"
+    reference_version: "v1"
+attachments: 
+  - destination_name: "deployment-1"
+    sources: 
+      - source_name: "pipeline_start"
+        mapping: 
+          - source_field_name: "input"
+            destination_field_name: "input"
+  - destination_name: "deployment-2-v1"
+    sources: 
+      - source_name: "deployment-1"
+        mapping: 
+          - source_field_name: "output"
+            destination_field_name: "input"
+  - destination_name: "pipeline_end"
+    sources: 
+      - source_name: "deployment-2-v1"
+        mapping: 
+          - source_field_name: "output"
+            destination_field_name: "output"

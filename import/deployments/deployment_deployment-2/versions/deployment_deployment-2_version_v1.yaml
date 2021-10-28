@@ -1,0 +1,17 @@
+version_name: "v1"
+version_description: ""
+version_labels: {}
+language: python3.8
+memory_allocation: 2048
+minimum_instances: 0
+maximum_instances: 1
+maximum_idle_time: 300
+request_retention_mode: "full"
+request_retention_time: 604800
+deployment_mode: batch
+#version_environment_variables:
+#  - name: "VERSION_ENV_VAR_1"
+#    value: "hello"
+#  - name: "VERSION_ENV_VAR_2_SECRET"
+#    value: ""
+#    secret: True
